@@ -12,10 +12,9 @@ function logger(req, res, next) {
   if (process.env.NODE_ENV === 'production') {
     return morgan('common', {
       skip: (request, result) => result.statusCode < 400,
-      stream: fs.createWriteStream(
-        path.join(__dirname, '../../logs/access.log'),
-        { flags: 'a' }
-      ),
+      stream: fs.createWriteStream(path.join(__dirname, '../logs/access.log'), {
+        flags: 'a',
+      }),
     })(req, res, next);
   }
 
