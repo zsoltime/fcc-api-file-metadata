@@ -11,10 +11,10 @@ const FIELD_NAME = 'upfile';
 
 router.post('/filedata', cors(), upload.single(FIELD_NAME), (req, res) => {
   if (!req.file) {
-    return res.json({
-      error: true,
-      message: 'No file provided',
-    });
+    const error = new Error('No file provided');
+    error.status = 400;
+
+    throw error;
   }
 
   return res.json({

@@ -3,6 +3,7 @@
 const express = require('express');
 const path = require('path');
 
+const errorHandler = require('./middlewares/errorHandler');
 const logger = require('./middlewares/logger');
 const routes = require('./routes');
 
@@ -16,5 +17,6 @@ app.set('view engine', 'pug');
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
+app.use(errorHandler);
 
 module.exports = app;
