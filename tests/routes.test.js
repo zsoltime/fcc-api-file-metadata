@@ -17,4 +17,12 @@ describe('Endpoints', () => {
         });
     });
   });
+
+  describe('POST /filedata', () => {
+    it.skip('should return a JSON object with the file size, name and MIME type', () => {});
+
+    it.skip('should return an error if no file is uploaded', () => {});
+
+    it.skip('should return an error if field name is not upfile', () => {});
+  });
 });
