@@ -1,0 +1,26 @@
+extends _layout.pug
+block content
+  include _header.pug
+
+  main.wrapper.wrapper--no-bottom
+    section#intro
+      p File metadata microservice is yet another small API built for #[a(href='https://learn.freecodecamp.org/apis-and-microservices/apis-and-microservices-projects/file-metadata-microservice', target='_blank') freeCodeCamp]. The app attempts to inspect the metadata of a file uploaded by the user and returning back with the name, size and type of that file.
+
+    section#user-stories
+      h3 User Stories
+      blockquote
+        ul.stories
+          li.stories__item <input class="stories__checkbox" type="checkbox" disabled> I can submit a form object that includes a file upload.
+          li.stories__item <input class="stories__checkbox" type="checkbox" disabled> The from file input field has the "name" attribute set to "upfile". We rely on this in testing.
+          li.stories__item <input class="stories__checkbox" type="checkbox" disabled> When I submit something, I will receive the file name, and size in bytes within the JSON response.
+
+    section#usage
+      <code>// TODO</code>
+
+    section#notes
+      p The example above uses the #[a(href='https://developer.mozilla.org/en/docs/Web/API/Fetch_API', target='_blank') fetch() API] to get the results via AJAX requests. It works in all modern browsers (Chrome 42+, FireFox 39+, Safari 10+, Opera 29+, and Edge 14+ only); IE is not supported.
+      p The live preview won't work for you in Internet Explorer or really old browsers.
+      p The GitHub repo is available here: #[a(href='https://github.com/zsoltime/fcc-api-file-metadata') File Metadata Microservice]
+
+  include _footer.pug
+  script(src='app.js')
