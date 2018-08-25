@@ -4,7 +4,7 @@ This is my file metadata microservice for [freeCodeCamp's last API project][fcc-
 
 ## User Stories
 
-- [x I can submit a form object that includes a file upload.
+- [x] I can submit a form object that includes a file upload.
 - [x] The form file input field has the `name` attribute set to `upfile`. We rely on this in testing.
 - [x] When I submit something, I will receive the file name, and size in bytes within the JSON response.
 
